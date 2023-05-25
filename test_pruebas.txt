@@ -1,0 +1,11 @@
+>>> from pruebas import palindromo
+
+>>> palindromo('Anita lava la tina')
+True
+
+>>> sentence = 'Oso'
+>>> palindromo(sentence)
+True
+
+>>> palindromo('CodigoFacilito')
+False
