@@ -1,3 +1,4 @@
+>>> from pruebas import User
 >>> from pruebas import palindromo
 
 >>> palindromo('Anita lava la tina')
@@ -9,3 +10,14 @@ True
 
 >>> palindromo('CodigoFacilito')
 False
+
+>>> username = 'Eduardo'
+>>> password = 'password123'
+
+>>> user = User(username, password)
+
+>>> user.username == username
+True
+
+>>> user.password == password
+True

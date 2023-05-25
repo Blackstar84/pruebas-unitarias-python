@@ -6,13 +6,16 @@
 class User:
     """Permite representar un usuario"""
 
-    def __init__(self, username: str, pasword: str) -> None:
+    def __init__(self, username: str, password: str) -> None:
         """Permite instanciar un objeto de tipo user
 
         Args:
             username (_type_): El username del usuario.
             pasword (_type_): El password del usuario.
         """
+
+        self.username = username
+        self.password = password
 
 
 def palindromo(sentence: str) -> bool:
