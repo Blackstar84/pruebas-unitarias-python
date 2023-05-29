@@ -14,6 +14,11 @@ class Product:
         
         self.discount = discount
 
+    @property # convertimos el método en un atributo
+    def code(self):
+        return f'code-{self.name}'
+        
+
 
 
 

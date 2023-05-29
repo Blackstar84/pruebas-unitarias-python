@@ -119,6 +119,8 @@ class TestShoppingCart(unittest.TestCase):
         pass
 
 
+    def test_code_product(self):
+        self.assertRegex(self.smartphone.code, self.smartphone.name, 'Lo sentimos, el código no cumple con la expresión.')
 
 
 
