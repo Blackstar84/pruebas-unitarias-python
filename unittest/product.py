@@ -4,3 +4,8 @@ class Product:
         self.name = name
         self.price = price
         self.discount = discount
+
+
+
+
+print("Hello\nWorld!")        
