@@ -8,8 +8,22 @@ from app.task import DueDateError
 def is_available_to_skip():
     return True
 
-""" def test_username(username):
-    pass """
+@pytest.fixture
+def username():
+    return 'Cody'
+
+@pytest.fixture
+def password():
+    return 'password'
+
+def test_username(username):
+    print(username)
+    assert username == 'Cody'
+
+def test_username_and_password(username, password):
+    assert username == 'Cody'
+    assert password == 'password'
+
 
 class TestTask():
     
