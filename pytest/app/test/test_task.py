@@ -5,12 +5,18 @@ from app.task import Task
 
 from app.task import DueDateError
 
+def is_available_to_skip():
+    return True
+
+""" def test_username(username):
+    pass """
+
 class TestTask():
     
     @pytest.mark.news
     def test_task(self):
         assert True
-        
+
     @pytest.mark.news
     def test_new_task(self):
         due_date = datetime.now() + timedelta(days=1)
@@ -34,3 +40,10 @@ class TestTask():
         task = Task('Title', 'Description', 'eduardo_gpg', due_date)
 
         assert task.due_date > datetime.now()
+
+
+    #@pytest.mark.skip(reason='Lo sentimos, la prueba no cumple con los requerimientos.')
+    #@pytest.mark.skipif(True, reason='Lo sentimos, la prueba no cumple con los requerimientos.')
+    @pytest.mark.skipif(is_available_to_skip(), reason='Lo sentimos, la prueba no cumple con los requerimientos.')
+    def test_skip(self):
+        pass    
