@@ -3,11 +3,6 @@ import unittest
 from product import Product, ProductDiscountError
 from shopping_cart import ShoppingCart
 
-def is_available_to_skip():
-    return True
-
-def is_connected():
-    return False
 
 class TestShoppingCart(unittest.TestCase):
 
@@ -35,15 +30,10 @@ class TestShoppingCart(unittest.TestCase):
         print('>>> El método tearDown se ejecuta después de cada una de las pruebas.')
 
 
-
-
-
     def test_product_object(self):
         name = 'Manzana'
         price = 1.70
-
         product = Product(name, price)
-
 
         self.assertEqual(product.name, name)
         self.assertEqual(product.price, price)
@@ -97,32 +87,7 @@ class TestShoppingCart(unittest.TestCase):
 
     def test_total_empty_shopping_cart(self):
         self.assertEqual(self.shopping_cart_1.total, 0.0)    
-
-    @unittest.skip('La prueba no cumple con los requerimientos necesarios')
-    def test_skip_example(self):
-        self.assertEqual(1,1)    
-
-    """ @unittest.skipIf(True, 'No se cuenta con todos los requerimientos')
-    def test_skip_example_two(self):
-        pass """
-
-    @unittest.skipIf(is_available_to_skip(), 'No se cuenta con todos los requerimientos')
-    def test_skip_example_two(self):
-        pass
-
-
-    # skipIf -> Evalua si el valor es verdadero
-    # skipUnless -> Evalua si el valor es falso
-
-    @unittest.skipUnless(is_connected(), 'No se cuenta con todos los requerimientos')
-    def test_skip_example_three(self):
-        pass
-
+        
 
     def test_code_product(self):
         self.assertRegex(self.smartphone.code, self.smartphone.name, 'Lo sentimos, el código no cumple con la expresión.')
-
-
-
-if __name__ == '__main__':
-    unittest.main()        
