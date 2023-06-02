@@ -9,7 +9,21 @@ import logging
 # logging.basicConfig(level=20)
 # logging.basicConfig(level=logging.DEBUG)
 
-logging.basicConfig(level=logging.INFO)
+""" logging.basicConfig(level=logging.INFO, 
+                    format="%(process)s"
+                    ) """
+                    
+""" logging.basicConfig(level=logging.INFO, 
+                    format="%(processName)s"
+                    )                     """
+
+""" logging.basicConfig(level=logging.INFO, 
+                    format="%(thread)s"
+                    )      """      
+logging.basicConfig(level=logging.INFO, 
+                    format="%(threadName)s - %(levelname)s - %(asctime)s - Message: %(message)s",
+                    datefmt="%Y/%m/%d %H:%M"
+                    )                                  
 
 
 def suma(numero1: int, numero2: int) -> int:
