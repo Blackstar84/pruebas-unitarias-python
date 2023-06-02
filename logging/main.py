@@ -22,7 +22,9 @@ import logging
                     )      """      
 logging.basicConfig(level=logging.INFO, 
                     format="%(threadName)s - %(levelname)s - %(asctime)s - Message: %(message)s",
-                    datefmt="%Y/%m/%d %H:%M"
+                    datefmt="%Y/%m/%d %H:%M",
+                    filename="codigofacilito.log",
+                    filemode="a"
                     )                                  
 
 
